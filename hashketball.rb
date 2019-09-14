@@ -126,13 +126,13 @@ hash = {
 end 
 
 def num_points_scored(name)
-  final_points == player[:points]
+  final_points == nil
 game_hash.each do |place, team|
   team.each do |attribute, data|
     if attribute == :players
     data.each do |player|
       if player[:name] == name
-      return player[:points]
+      final_points = player[:points]
        end 
       end
     end
