@@ -188,23 +188,16 @@ def player_numbers(team_name)
  nums 
  end 
  
- def player_stats(name)
-   new_hash = {}
-   game_hash.each do |place, team| 
-     team.each do |attributes, data|
-       if attributes == :players
-         data.each do |player|
-           if player[:name] = name
-             new_hash = player.delete_if do |k, v|
-               k = :name 
-             end
-           end
-         end
-       end
-     end
-   end
-   new_hash
- end
+def player_stats(name)
+  hash = game_hash
+  hash.each do |location, attributes| 
+    attributes.each do |attribute, info| 
+      if info.include?(name) 
+       return hash[location][attribute][name]
+      end
+    end
+  end
+end
 
 
 
