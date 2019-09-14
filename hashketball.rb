@@ -1,10 +1,12 @@
+require 'pry'
 def game_hash
 hash = {
   :home => {
     :team_name => "Brooklyn Nets",
     :colors => ["Black", "White"],
-    :players => {
-      "Alan Anderson" => {
+    :players => [
+     {
+      :name => "Alan Anderson", 
       :number => 0,
       :shoe => 16,
       :points => 22,
@@ -14,7 +16,8 @@ hash = {
       :blocks => 1,
       :slam_dunks => 1
     },
-     "Reggie Evans" => {
+     {
+      :name => "Reggie Evans",
       :number => 30,
       :shoe => 14,
       :points => 12,
@@ -24,7 +27,8 @@ hash = {
       :blocks => 12,
       :slam_dunks => 7
     },
-     "Brock Lopez" => {
+     {
+      :name => "Brock Lopez",
       :number => 11,
       :shoe => 17,
       :points => 17,
@@ -34,7 +38,7 @@ hash = {
       :blocks => 1,
       :slam_dunks => 15
     },
-     "Mason Plumlee" => {
+    { :name => "Mason Plumlee",
       :number => 1,
       :shoe => 19,
       :points => 26,
@@ -44,7 +48,8 @@ hash = {
       :blocks => 8,
       :slam_dunks => 5
     },
-     "Jason Terry" => {
+     {
+      :name => "Jason Terry",
       :number => 31,
       :shoe => 15,
       :points => 19,
@@ -54,13 +59,14 @@ hash = {
       :blocks => 11,
       :slam_dunks => 1
      }
-    }
+    ]
   },
   :away => {
     :team_name => "Charlotte Hornets",
-    :colors => ["Turquoise", "Purple"]
-    :players => { 
-      "Jeff Adrien" => {
+    :colors => ["Turquoise", "Purple"],
+    :players => [ 
+     {
+      :name => "Jeff Adrien",
       :number => 4,
       :shoe => 18,
       :points => 10,
@@ -70,7 +76,8 @@ hash = {
       :blocks => 7,
       :slam_dunks => 2 
     },
-     "Bismack Biyombo" => {
+     {
+      :name => "Bismack Biyombo",
       :number => 0,
       :shoe => 16,
       :points => 12,
@@ -80,7 +87,8 @@ hash = {
       :blocks => 15,
       :slam_dunks => 10
     },
-     "DeSanga Diop" => {
+     {
+      :name => "DeSanga Diop",
       :number => 2,
       :shoe => 14,
       :points => 24,
@@ -90,7 +98,8 @@ hash = {
       :blocks => 5,
       :slam_dunks => 5 
     },
-     "Ben Gordon" => {
+     {
+      :name => "Ben Gordon",
       :number => 8,
       :shoe => 15,
       :points => 33,
@@ -100,7 +109,8 @@ hash = {
       :blocks => 1,
       :slam_dunks => 0
     },
-     "Brendan Haywood" => {
+     {
+      :name => "Brendan Haywood",
       :number => 33,
       :shoe => 15,
       :points => 6,
@@ -110,12 +120,27 @@ hash = {
       :blocks => 5,
       :slam_dunks => 12
    }
-  }
+  ]
  }
 }
 end 
 
-
+def num_points_scored(name)
+  final_points == 
+game_hash.each do |place, team|
+  team.each do |attribute, data|
+    if attribute == :players
+    data.each do |player|
+      if player[:name] == name
+      final_points = player[:points]
+       end 
+      end
+    end
+  end 
+ end 
+ final_points
+end
+  
 
 
 
