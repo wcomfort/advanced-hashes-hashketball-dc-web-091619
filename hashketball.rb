@@ -28,7 +28,7 @@ hash = {
       :slam_dunks => 7
     },
      {
-      :name => "Brock Lopez",
+      :name => "Brook Lopez",
       :number => 11,
       :shoe => 17,
       :points => 17,
