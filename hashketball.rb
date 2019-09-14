@@ -138,7 +138,7 @@ game_hash.each do |place, team|
     end
   end
  end
-  binding.pry
+  #binding.pry
  final_points
 end
   
