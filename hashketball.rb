@@ -132,13 +132,13 @@ game_hash.each do |place, team|
     if attribute == :players
     data.each do |player|
       if player[:name] == name
-        binding.pry
       final_points = player[:points]
        end 
       end
     end
-  end 
+  end
  end
+  binding.pry
  final_points
 end
   
