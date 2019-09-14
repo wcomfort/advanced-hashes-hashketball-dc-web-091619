@@ -143,17 +143,19 @@ game_hash.each do |place, team|
 end
 
 def shoe_size(name)
+  player_shoe = nil 
   game_hash.each do |place, team|
   team.each do |attribute, data|
     if attribute == :players
     data.each do |player|
       if player[:name] == name
-      final_points = player[:shoe]
+      player_shoe = player[:shoe]
        end 
       end
     end
   end
  end
+ player_shoe
 end 
 
 
