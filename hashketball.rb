@@ -141,6 +141,19 @@ game_hash.each do |place, team|
   #binding.pry
  final_points
 end
+
+def shoe_size(name)
+  game_hash.each do |place, team|
+  team.each do |attribute, data|
+    if attribute == :players
+    data.each do |player|
+      if player[:name] == name
+      final_points = player[:points]
+       end 
+      end
+    end
+  end
+ end
   
 
 
