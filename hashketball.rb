@@ -197,7 +197,14 @@ def player_numbers(team_name)
            if player[:name] = name
              new_hash = player.delete_if do |k, v|
                k = :name 
-               
+             end
+           end
+         end
+       end
+     end
+   end
+   new_hash
+ end
 
 
 
