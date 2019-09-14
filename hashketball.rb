@@ -88,7 +88,7 @@ hash = {
       :slam_dunks => 10
     },
      {
-      :name => "DeSanga Diop",
+      :name => "DeSagna Diop",
       :number => 2,
       :shoe => 14,
       :points => 24,
