@@ -110,7 +110,7 @@ hash = {
       :slam_dunks => 0
     },
      {
-      :name => "Brendan Haywood",
+      :name => "Kemba Walker",
       :number => 33,
       :shoe => 15,
       :points => 6,
